@@ -152,13 +152,14 @@ function post_box($post, $color) {
         $icon = get_field('icon', $post->ID);
         if ($icon) {
         		?>
-        			<img class="icon" src="<?php echo get_template_directory_uri() . "/img/${icon}_ikona.svg"; ?>">
+				<img class="icon" src="<?php echo get_template_directory_uri() . "/img/ikony/${icon}.svg"; ?>">
         		<?php
         }
         ?>
 		</div>
 		<h3><?php echo get_the_title($post); ?></h3>
         <?php echo apply_filters('the_excerpt', wp_trim_words($post->post_content, 25, '')); ?>
+        <div class="read-more">czytaj więcej ></div>
 
 	</a></div><?php
 }
