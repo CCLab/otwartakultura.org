@@ -40,12 +40,14 @@ while ( $archive_query->have_posts() ) {
 		if (has_post_thumbnail()) {
 			?> style="background-image: url('<?php echo the_post_thumbnail_url('large'); ?>');"<?php
 		} ?>>
-	<header>
 	<a href="<?php echo get_permalink() ?>">
+	<header>
+	<div class="title-box">
         <h1><?php echo get_the_title(); ?></h1>
         <span class="timestamp"><?php the_date() ?></span>
 		<span class="read-more">czytaj więcej ></span>
-        </a></header>
+        </div></header>
+	</a>
 	</article>
     <?php
     $first = false;

@@ -26,13 +26,15 @@ while ( have_posts() ) {
 		if (has_post_thumbnail()) {
 			?> style="background-image: url('<?php echo the_post_thumbnail_url('large'); ?>');"<?php
 		} ?>>
+	<a href="<?php echo get_permalink() ?>">
 	<header>
         <div class="header-inner">
-	<a href="<?php echo get_permalink() ?>">
+	<div class="title-box">
         <h1><?php echo get_the_title(); ?></h1>
         <span class="timestamp"><?php the_date() ?></span>
 		<span class="read-more">czytaj więcej ></span>
-        </a></div></header>
+        </div></div></header>
+	</a>
 	</article>
 	<?php
         $first = false;
